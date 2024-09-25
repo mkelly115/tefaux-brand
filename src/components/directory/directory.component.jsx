@@ -14,4 +14,3 @@ const Directory = ({categories}) => {
 
 export default Directory
 
-//test code
