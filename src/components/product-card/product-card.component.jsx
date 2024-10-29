@@ -1,4 +1,4 @@
-import './product-card.styles.scss'
+import {ProductCardContainer} from './product-card.styles.jsx'
 
 import { UserContext } from '../../contexts/user.context';
 
@@ -16,7 +16,7 @@ const ProductCard = ({ product }) => {
     const addProductToCart = () => addItemToCart(product)
 
     return (
-        <div className='product-card-container'>
+        <ProductCardContainer>
             <img src={imageUrl} alt={`${name}`} />
             <div className='footer'>
                 <span className='name'>{name}</span>
@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
             <Button buttonType='inverted' onClick={addProductToCart}>
                 Add to cart
             </Button>
-        </div>
+        </ProductCardContainer>
     );
 
 

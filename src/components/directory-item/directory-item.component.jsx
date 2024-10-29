@@ -1,9 +1,10 @@
-import '../directory-item/directory-item.styles.scss'
+import '../directory-item/directory-item.styles.jsx'
+import { DirectoryItemContainer } from '../directory-item/directory-item.styles.jsx';
 
 const DirectoryItem = ({ category }) => {
     const { imageUrl, title } = category;
 return (
-    <div className="directory-item-container">
+    <DirectoryItemContainer>
           <div className="background-image" style={{
             backgroundImage: `url(${imageUrl})`
           }} />
@@ -11,7 +12,7 @@ return (
             <h2>{title}</h2>
             <p>Shop Now!</p>
           </div>
-        </div>
+        </DirectoryItemContainer>
 )
 
 }
