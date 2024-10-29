@@ -3,7 +3,7 @@ import { useContext } from 'react'
 
 import { CartContext } from '../../contexts/cart.context'
 
-import './cart-icon.styles.scss'
+import {CartIconContainer, ItemCount} from './cart-icon.styles.jsx'
 
 const CartIcon = () => {
 
@@ -11,15 +11,13 @@ const CartIcon = () => {
     const toggleIsCartOpen = () => setIsCartOpen(!isCartopen)
 
     return(
-        <div className='cart-icon-container' onClick={toggleIsCartOpen}>
+        <CartIconContainer onClick={toggleIsCartOpen}>
             <ShoppingIcon className='shopping-icon'/>
-            <span className='item-count'>{cartCount}</span>
-        </div>
+            <ItemCount as='span'>{cartCount}</ItemCount>
+        </CartIconContainer>
     )
 }
 
 export default CartIcon
 
-// click add to shopping cart
-
-// item will add +1 to shopping cart counter
+// How would I work with ShoppingIcon and a ShopIcon Style React import
