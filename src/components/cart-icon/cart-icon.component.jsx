@@ -19,5 +19,3 @@ const CartIcon = () => {
 }
 
 export default CartIcon
-
-// How would I work with ShoppingIcon and a ShopIcon Style React import
