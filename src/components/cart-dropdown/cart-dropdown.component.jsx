@@ -23,7 +23,7 @@ const CartDropdown = () => {
                     <CartItem key={item.id} CartItem={item} />
                 ))}
             </CartItems>
-            <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
+            <Button style={{ padding: "0 10px" }} onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
         </CartDropDownContainer>
     )
 }
