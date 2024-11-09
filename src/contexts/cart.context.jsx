@@ -37,8 +37,6 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 
 const clearCartItem = (cartItems, cartItemToRemove) => cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id)
 
-
-
 export const CartContext = createContext({
     isCartopen: false,
     setIsCartOpen: () => { },
@@ -49,6 +47,11 @@ export const CartContext = createContext({
     cartCount: 0,
     cartTotal: 0
 })
+
+const CART_ACTION_TYPES = {
+    SET_CART_ITEMS: 'SET_CART_ITEMS',
+    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN'
+}
 
 const INITIAL_STATE = {
     isCartopen: false,
@@ -61,10 +64,15 @@ const cartReducer = (state, action) => {
     const { type, payload } = action;
 
     switch (type) {
-        case 'SET_CART_ITEMS':
+        case CART_ACTION_TYPES.SET_CART_ITEMS:
             return {
                 ...state,
                 ...payload
+            };
+        case CART_ACTION_TYPES.SET_IS_CART_OPEN:
+            return {
+                ...state,
+                isCartopen: payload
             }
 
         default:
@@ -74,12 +82,12 @@ const cartReducer = (state, action) => {
 
 export const CartProvider = ({ children }) => {
 
-    const [{ cartItems, isCartopen, cartCount, cartTotal }, dispatch] = 
-    useReducer(cartReducer, INITIAL_STATE)
+    const [{ cartItems, isCartopen, cartCount, cartTotal }, dispatch] =
+        useReducer(cartReducer, INITIAL_STATE)
 
     const updateCartItemsReducer = (newCartItems) => {
         const newCartCount = newCartItems.reduce(
-            (total, cartItem) => total + cartItem.quantity * cartItem.price,
+            (total, cartItem) => total + cartItem.quantity,
             0
         );
 
@@ -89,7 +97,7 @@ export const CartProvider = ({ children }) => {
         );
 
         dispatch({
-            type: 'SET_CART_ITEMS',
+            type: CART_ACTION_TYPES.SET_CART_ITEMS,
             payload: {
                 cartItems: newCartItems,
                 cartTotal: newCartTotal,
@@ -114,9 +122,13 @@ export const CartProvider = ({ children }) => {
         const newCartItems = clearCartItem(cartItems, cartItemToClear)
         updateCartItemsReducer(newCartItems)
 
+    };
+
+    const setIsCartOpen = (bool) => {
+        dispatch({ type: CART_ACTION_TYPES.SET_IS_CART_OPEN, payload: bool })
     }
 
-    const value = { isCartopen, setIsCartOpen: () => true, addItemToCart, removeItemFromCart, clearItemFromCart, cartItems, cartCount, cartTotal };
+    const value = { isCartopen, setIsCartOpen, addItemToCart, removeItemFromCart, clearItemFromCart, cartItems, cartCount, cartTotal };
 
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 
