@@ -1,9 +1,5 @@
 import {ProductCardContainer} from './product-card.styles.jsx'
-
-import { UserContext } from '../../contexts/user.context';
-
 import Button, {BUTTON_TYPE_CLASSES} from '../button/button.component'
-
 import { CartContext } from '../../contexts/cart.context';
 import { useContext } from 'react';
 
