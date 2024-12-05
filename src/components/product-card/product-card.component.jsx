@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
     const addProductToCart = () => dispatch(addItemToCart(cartItems, product))
 
     return (
-        <ProductCardContainer>
+        <ProductCardContainer className='ProductCardContainer'>
             <img src={imageUrl} alt={`${name}`} />
             <div className='footer'>
                 <span className='name'>{name}</span>

@@ -5,6 +5,8 @@ export const DirectoryContainer = styled.div`
     flex-wrap: wrap;
     justify-content: space-between; 
 `
+
+DirectoryContainer.displayName = "DirectoryContainer"
 // .directory-container {
 //     display: flex;
 //     flex-wrap: wrap;

@@ -50,6 +50,12 @@ width: 100%;
             width: 10%;
         }
     }
+          @media (max-width: 768px) {
+    width: 100%; 
+    justify-content: space-around; 
+    padding: 10px 0;]
+    font-size: 10px;
+  }
 `
 
 // .product-card-container {
