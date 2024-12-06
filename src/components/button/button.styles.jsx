@@ -27,7 +27,7 @@ export const BaseButton = styled.button`
         border: 1px solid black;
     }
           @media (max-width: 768px) {
-          font-size: 13px
+          font-size: 10px
         }
 `
 
@@ -41,7 +41,7 @@ export const GoogleSignInbutton = styled(BaseButton)`
         }
 
          @media (max-width: 768px) {
-          font-size: 13px
+          font-size: 10px
         }
 `
 
@@ -56,7 +56,7 @@ export const InvertedButton = styled(BaseButton)`
             border: none;
         }
               @media (max-width: 768px) {
-          font-size: 13px
+          font-size: 12px
         }
 `
 export const ButtonSpinnner = styled(SpinnerContainer)`

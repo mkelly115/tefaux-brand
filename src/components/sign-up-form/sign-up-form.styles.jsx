@@ -5,12 +5,19 @@ export const SignUpContainer = styled.div`
     flex-direction: column;
     width: 380px;
 
-    h2{
+    h2 {
         margin: 10px 0;
     }
-    
-     @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
         width: 100%;  
         padding: 20px; 
-`
+        display: flex; 
+        
+        button { 
 
+            align-self: center; 
+            justify-content: center; 
+        }
+    }
+`;

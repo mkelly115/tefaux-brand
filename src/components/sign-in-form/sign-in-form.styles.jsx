@@ -10,18 +10,22 @@ export const SignInContainer = styled.div`
     }
           @media (max-width: 768px) {
             width: 100%; 
+            padding: 20px;
         }
 `
 export const ButtonsContainer = styled.div`
       display: flex;
-        justify-content: space-between;
-
+        justify-content: center;
+        
         button {
         
         @media (max-width: 768px) {
-            width: 100%;  
-            margin-bottom: 10px;  
+            width: 50%;  
+            margin-bottom: 10px;
+            padding:
+            
         }
     }
+        
 `
 
