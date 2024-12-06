@@ -11,8 +11,8 @@ const Checkout = () => {
     const cartTotal = useSelector(selectCartTotal);
 
     return (
-        <CheckoutContainer>
-            <Header>
+        <CheckoutContainer className='CheckoutContainer'>
+            <Header className='CheckoutHeading'>
                 <HeaderBlock>
                     <span>Product</span>
                 </HeaderBlock>

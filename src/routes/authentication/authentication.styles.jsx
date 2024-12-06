@@ -5,6 +5,13 @@ export const AuthenticationContainer = styled.div`
     width: 900px;
     justify-content: space-between;
     margin: 30px auto;
+
+      @media (max-width: 768px) {
+    flex-direction: column; 
+    width: 100%;
+    padding: 20px;
+  }
+
 `
 
 
