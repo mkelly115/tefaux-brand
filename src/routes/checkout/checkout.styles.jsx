@@ -65,6 +65,8 @@ export const Total = styled.div`
     font-weight: bold;
     margin: 20px 0;
     text-align: center;
+    padding-bottom: 20px;
+
 
     @media screen and (min-width: 769px) {
         text-align: right;

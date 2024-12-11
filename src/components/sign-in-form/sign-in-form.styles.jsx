@@ -14,18 +14,18 @@ export const SignInContainer = styled.div`
         }
 `
 export const ButtonsContainer = styled.div`
-      display: flex;
-        justify-content: center;
-        
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px; 
+
         button {
-        
-        @media (max-width: 768px) {
-            width: 50%;  
-            margin-bottom: 10px;
-            padding:
-            
+            width: 80%; 
         }
     }
-        
-`
+`;
 
