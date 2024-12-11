@@ -2,58 +2,73 @@ import styled from "styled-components";
 
 // CheckoutItemContainer
 export const CheckoutItemContainer = styled.div`
-    width: 100%;
     display: flex;
-    flex-wrap: wrap; 
-    min-height: 100px;
-    border-bottom: 1px solid darkgrey;
+    align-items: center;
     padding: 15px 0;
     font-size: 20px;
+    border-bottom: 1px solid darkgrey;
+
+    @media screen and (max-width: 768px) {
+        flex-wrap: nowrap; 
+        justify-content: space-between;
+    }
+`;
+
+// ImageContainer
+export const ImageContainer = styled.div`
+    width: 23%;
+    padding-right: 15px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+    }
+`;
+
+// DetailsContainer
+export const DetailsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 65%;
     align-items: center;
 
     @media screen and (max-width: 768px) {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    .image-container {
-        width: 23%;
-        padding-right: 15px;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-            margin-bottom: 10px; 
-        }
+        flex: 1; 
+        align-items: center;
+        justify-content: center;
+        padding-right: 10px;
     }
 `;
 
 // PriceName
 export const PriceName = styled.div`
-    width: 23%;
-    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
 
     @media screen and (max-width: 768px) {
+        text-align: center;
         width: 100%;
-        text-align: center; 
-        margin-bottom: 5px; 
+        font-size: 14px;
     }
 `;
 
-// Quantity
-export const Quantity = styled.div`
+// QuantityControls
+export const QuantityControls = styled.div`
     display: flex;
-    width: 23%;
     align-items: center;
+    padding: 20px;
 
     .arrow {
         cursor: pointer;
         font-size: 20px;
-        user-select: none; 
+        user-select: none;
     }
 
     .value {
@@ -61,65 +76,32 @@ export const Quantity = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        width: 100%;
-        justify-content: center; 
-        margin-bottom: 10px; 
+        justify-content: flex-start;
+        font-size: 14px;
+        padding: 5px;
+    }
+`;
+
+// RemoveButtonContainer
+export const RemoveButtonContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+
+    @media screen and (max-width: 768px) {
+        position: relative;
+        right: 0;
     }
 `;
 
 // RemoveButton
 export const RemoveButton = styled.div`
-    padding-left: 12px;
+    color: black;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 20px;
 
     @media screen and (max-width: 768px) {
-        margin-top: 10px; 
-        padding-left: 0;
-        text-align: center;
+        margin: 0;
     }
 `;
-
-// .checkout-item-container {
-//     width: 100%;
-//     display: flex;
-//     min-height: 100px;
-//     border-bottom: 1px solid darkgrey;
-//     padding: 15px 0;
-//     font-size: 20px;
-//     align-items: center;
-
-//     .image-container {
-//         width: 23%;
-//         padding-right: 15px;
-
-//         img {
-//             width: 100%;
-//             height: 100%;
-//         }
-//     }
-
-    // .name,
-    // .quantity,
-    // .price {
-    //     width: 23%;
-    // }
-
-//     .quantity {
-//         display: flex;
-//         width: 23%;
-
-//         .arrow {
-//             cursor: pointer;
-//         }
-
-//         .value {
-//             margin: 0 10px;
-//         }
-//     }
-
-//     .remove-button {
-//         padding-left: 12px;
-//         cursor: pointer;
-//     }
-// }

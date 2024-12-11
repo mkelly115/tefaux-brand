@@ -8,6 +8,8 @@ export const CheckoutContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 20px auto;
+    padding: 75px;
+    {*Idk if this padding is actually needed but I think it looks better?*}
 
     @media screen and (max-width: 768px) {
         width: 100%;

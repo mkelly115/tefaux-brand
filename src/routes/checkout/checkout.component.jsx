@@ -13,7 +13,7 @@ const Checkout = () => {
     return (
         <CheckoutContainer className='CheckoutContainer'>
             <Header className='CheckoutHeading'>
-                <HeaderBlock>
+                {/* <HeaderBlock>
                     <span>Product</span>
                 </HeaderBlock>
                 <HeaderBlock>
@@ -27,7 +27,7 @@ const Checkout = () => {
                 </HeaderBlock>
                 <HeaderBlock>
                     <span>Remove</span>
-                </HeaderBlock>
+                </HeaderBlock> */}
             </Header>
             {cartItems.map((cartItem) => (
                 <CheckoutItem key={cartItem.id} cartItem={cartItem} />
