@@ -1,9 +1,38 @@
 # Tefaux-Brand
 
-TO DO LIST:
+ Welcome to Tefaux Brand Clothing!
 
-Mobile Friendly for entire app
 
-Replace Alerts in CC confirmation for modal windows
+Features:
 
-Credit Card Success or Failure Modal
+
+
+Technical Details:
+
+
+
+Getting Started:
+
+1. Clone the repository and install dependencies using npm install
+2. Run the application using npm start
+3. Access the application through your web browser at <http://localhost:3000>
+
+Using the Application:
+
+
+
+Troubleshooting:
+
+
+
+Contributing:
+
+License:
+
+
+
+Acknowledgments:
+
+
+
+Enjoy using Literary Voyagers!
