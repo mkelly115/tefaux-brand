@@ -5,6 +5,9 @@
 
 Features:
 
+1. Full online shopping experience
+2. Credit/Debit Support
+3. Customizable Shopping Cart
 
 
 Technical Details:
