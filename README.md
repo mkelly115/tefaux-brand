@@ -22,6 +22,7 @@ Getting Started:
 
 Using the Application:
 
+1. Navigate the page using the buttons in the nav bar.
 
 
 Troubleshooting:
