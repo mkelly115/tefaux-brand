@@ -25,6 +25,7 @@ Using the Application:
 1. Navigate the page using the buttons in the nav bar.
 2. Navigate to different routes for different types of clothing.
 3. Select individual clothing products to place in checkout container
+4. Enter Credit Card information in checkout page to make purchase
 
 
 
