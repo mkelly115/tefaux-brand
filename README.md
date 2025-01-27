@@ -8,7 +8,7 @@ Features:
 1. Full online shopping experience
 2. Credit/Debit Support
 3. Customizable Shopping Cart
-
+4. Seperate Mobile and Desktop Layouts for optimal performance
 
 Technical Details:
 
